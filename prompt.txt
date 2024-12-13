@@ -14,7 +14,7 @@ Pin	Signal	Description
 12	VCC	Power Supply (3.3V/5V)
 
 its a 4x4 matrix keypad, but idk where is (0,0)
-but here's the physical button:
+but here's the physical button legends:
 1 2 3 A
 4 5 6 B
 7 8 9 C
@@ -24,7 +24,7 @@ Header Pmod port JA (Nexys Artix-7 100T)
 JA1: C17
 JA2: D18
 JA3: E18
-JA4: G1
+JA4: G17
 JA7: D17
 JA8: E17
 JA9: F18
@@ -54,14 +54,14 @@ Mono Audio Out: J8
 
 help me make a "4 digit password smart door lock" simulation in Vivado VHDL VHD with separate files for each component to main.vhd
 my plan is to plug PmodKPD to port JA and use it as input.
-the output is the 1st 4 digits of the left side 8 digit 7seg to show what the password was just entered from keypad.
+the output is the AN7to AN4 to show what the password was just entered from keypad, use a ring counter.
 if correct or error, generate a tone of bad or good sound.
-and display on the right side 8 digit 7segment like "FAIL" or "gOod" to it.
+and display AN3 to AN0 like "FAIL" or "good" to it, blinking 3 times and stay on  for 2 seconds.
 
 the alphabets in the keypad can be set to this:
 A = Accept or check if the password is the same, if yes it opens and triggers good tone and "GOOD"
 B = Backspace or delete the previous digit
-C = Clear all 4 digits
+C = Clear all 4 digits (AN7 to AN0, turned off)
 D = bypass or override, imagine like its the indoor button of a hotel door
-E = Empty or reset the password
-F = Fill or set the password
+E = Password reset
+F = password set
