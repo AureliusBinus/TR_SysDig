@@ -32,14 +32,23 @@ JA10: G18
 
 8digit 7segment Display (Nexys Artix-7 100T) package pin 
 (AN0 starts from right to left of the 7segment digit, CA to DP is left to right of the 4:4 digit)
-U13: AN7	T10: CA
-K2 : AN6	R10: CB
-T14: AN5	K16: CC
-P14: AN4	K13: CD
-J14: AN3	P15: CE
-T9 : AN3	T11: CF
-J18: AN2	L18: CG
-J17: AN0	H15: DP
+U13: AN7
+K2 : AN6
+T14: AN5
+P14: AN4
+J14: AN3
+T9 : AN3
+J18: AN2
+J17: AN0
+
+T10: CA
+R10: CB
+K16: CC
+K13: CD
+P15: CE
+T11: CF
+L18: CG
+H15: DP
 
 Mono Audio Out: J8
 
